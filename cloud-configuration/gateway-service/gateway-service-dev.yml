@@ -1,0 +1,28 @@
+server:
+  port: 9292
+
+zuul:
+  routes:
+   oauth-service:
+    sensitiveHeaders:
+    path: /oauth/**
+    stripPrefix: false
+    serviceId: oauth2-service
+   student-service:
+      sensitiveHeaders:
+      path: /student/**
+      stripPrefix: false
+      serviceId: student-service
+   course-service:
+      sensitiveHeaders:
+      path: /course/**
+      stripPrefix: false
+      serviceId: course-service
+   payment-service:
+      sensitiveHeaders:
+      path: /payment/**
+      stripPrefix: false
+      serviceId: payment-service
+
+ribbon:
+  ReadTimeout: 60000

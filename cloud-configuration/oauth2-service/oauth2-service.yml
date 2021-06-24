@@ -1,0 +1,26 @@
+server:
+    port: 0
+spring:
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+  thymeleaf:
+    mode: HTML
+    cache: false
+    enabled: true
+logging:
+  level:
+    org:
+      hibernate:
+        type: off
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 5
+    serviceUrl:
+     defaultZone: http://192.168.8.90:8761/eureka/
+  instance:
+    instance-id: ${spring.application.name}-${eureka.instance.hostname}-${random.int}

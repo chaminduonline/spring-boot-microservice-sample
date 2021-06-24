@@ -1,0 +1,12 @@
+server:
+  port: 8761
+eureka:
+  server:
+    instance:
+      hostname: localhost
+  client:
+  environment: production
+spring:
+  profiles:
+    active: production
+
