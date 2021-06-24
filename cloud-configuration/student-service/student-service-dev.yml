@@ -14,7 +14,7 @@ security:
   oauth2:
     resource:
       token-info-uri: http://localhost:9292/oauth/check_token
-      id: inventory
+      id: student
     client:
       access-token-uri: http://localhost:9292/oauth/token
       user-authorization-uri: http://localhost:9292/oauth/authorize
