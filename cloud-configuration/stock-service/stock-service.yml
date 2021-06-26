@@ -1,6 +1,6 @@
 spring:
   application:
-    name: student-service
+    name: stock-service
   cloud:
     circuitbreaker:
       hystrix:

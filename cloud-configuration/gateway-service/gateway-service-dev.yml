@@ -10,19 +10,19 @@ zuul:
     serviceId: oauth2-service
    student-service:
       sensitiveHeaders:
-      path: /student/**
+      path: /stock/**
       stripPrefix: false
-      serviceId: student-service
+      serviceId: stock-service
    course-service:
       sensitiveHeaders:
-      path: /course/**
+      path: /item/**
       stripPrefix: false
-      serviceId: course-service
+      serviceId: item-service
    payment-service:
       sensitiveHeaders:
-      path: /payment/**
+      path: /supplier/**
       stripPrefix: false
-      serviceId: payment-service
+      serviceId: supplier-service
 
 ribbon:
   ReadTimeout: 60000
